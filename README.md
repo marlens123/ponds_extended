@@ -70,7 +70,6 @@ def get_submodules_from_kwargs(kwargs):
 
 ### <a id="Error2"></a>ERROR2: To be able login to wandb account
 
-
 - before executing `model_selection.py`or `train.py`, execute the following command: `wand login` and insert the key that was sent via email
 - you can also modify the scripts and login to your own wandb account
 
@@ -91,4 +90,3 @@ Additional references:
 - wandb and k-crossfold validation: https://www.kaggle.com/code/ayuraj/efficientnet-mixup-k-fold-using-tf-and-wandb/notebook
 - patchify library for patch extraction: https://pypi.org/project/patchify/
 - patch prediction: https://github.com/bnsreenu/python_for_microscopists/blob/master/206_sem_segm_large_images_using_unet_with_custom_patch_inference.py 
-- my brother Linus has helped with final markdown formatting of this README file
