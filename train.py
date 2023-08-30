@@ -15,6 +15,9 @@ from utils.patch_extraction import patch_pipeline, patch_extraction
 from models.segmentation_models_qubvel.segmentation_models.utils import set_trainable
 
 import wandb
+
+#wandb.init(project="extended")
+
 from wandb.keras import WandbMetricsLogger
 
 wandb.login()
@@ -444,7 +447,7 @@ def train_wrapper(X, y, im_size, base_pref, backbone='resnet34', loss='categoric
         ############# Tracking Config ############
         ##########################################
 
-        run = wandb.init(project='tir_mp',
+        run = wandb.init(project='extended',
                             group=base_pref,
                             name='foldn_{}'.format(fold_no),
                             config={
@@ -725,7 +728,7 @@ def final_train(X_train, y_train, X_test, y_test, im_size, base_pref, backbone='
     ############# Tracking Config ############
     ##########################################
 
-    run = wandb.init(project='tir_mp',
+    run = wandb.init(project='extended',
                         group=base_pref,
                         name=base_pref,
                         config={

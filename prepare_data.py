@@ -28,6 +28,9 @@ imgs = ds.variables['Ts'][:]
 timestamps = ds.variables['time'][:]
 
 ############## Training Data ###############
+
+# TO-DO: 4568
+
 imgs_train = [imgs[2416],imgs[2380],imgs[2424],imgs[2468],imgs[2476],imgs[2708],imgs[3700],imgs[3884]]
 
 ############## Test Data ###################
