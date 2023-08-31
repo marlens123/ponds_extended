@@ -3,6 +3,17 @@
 Extended code used in my bachelor thesis in Cognitive Science, University of Osnabrück.
 The objective of the thesis was to develop a segmentation tool that partitions TIR images into sea ice, melt pond and ocean classes.
 
+---------------------------------------
+
+### Current results
+
+
+![quali](https://github.com/marlens123/ponds_extended/assets/80780236/99ca9878-ead1-4ca8-a747-0dde23dd12f4)
+*As of 31.08.2023 (10 training images): left - model input, middle - model results Bachelor thesis, right - new model results. All images are from flight 9.*
+
+
+----------------------------------------
+
 To make the code work, do the following:
 
 1. Create a new anaconda environment with Python 3.10.0
