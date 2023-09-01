@@ -6,9 +6,8 @@ The objective of this repository is to develop a segmentation tool that partitio
 
 ### Current results
 
-
-![quali](https://github.com/marlens123/ponds_extended/assets/80780236/99ca9878-ead1-4ca8-a747-0dde23dd12f4)
-*As of 31.08.2023 (10 training images): left - model input, middle - model results Bachelor thesis, right - new model results. All images are from flight 9.*
+![quali](https://github.com/marlens123/ponds_extended/assets/80780236/5f67c223-b8e2-4c26-b8ab-8ae381015a77)
+*As of 31.08.2023 (10 training images): left - model input, middle - model results Bachelor thesis, right - new model results. Grey - sea ice, black - melt ponds, white - ocean. All images are from flight 9.*
 
 
 ----------------------------------------
