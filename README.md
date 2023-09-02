@@ -1,6 +1,6 @@
 # Detection of Melt Ponds on Arctic Sea Ice from Infrared Images
 
-The objective of this repository is to develop a segmentation tool that partitions TIR images into sea ice, melt pond and ocean classes. The current model is a U-net with ResNet34 backbone. This project is the extended version of my Bachelor thesis with the Polar Remote Sensing Group, University of Bremen and the Computer Vision Group, University of Osnabrück.
+The objective of this repository is to develop a segmentation tool that partitions TIR images into sea ice, melt pond and ocean classes. The current model is a U-net with ResNet34 backbone.
 
 ---------------------------------------
 ### Model Architecture
@@ -106,4 +106,7 @@ Fram Strait in 2022. Ed. by Horst Bornemann and Susan Amir Sawadkuhi. Bremerhav
 
 - wandb and k-crossfold validation: https://www.kaggle.com/code/ayuraj/efficientnet-mixup-k-fold-using-tf-and-wandb/notebook
 - patchify library for patch extraction: https://pypi.org/project/patchify/
-- patch prediction: https://github.com/bnsreenu/python_for_microscopists/blob/master/206_sem_segm_large_images_using_unet_with_custom_patch_inference.py 
+- patch prediction: https://github.com/bnsreenu/python_for_microscopists/blob/master/206_sem_segm_large_images_using_unet_with_custom_patch_inference.py
+
+
+The project is the extended version of my Bachelor thesis with the Polar Remote Sensing Group, University of Bremen and the Computer Vision Group, University of Osnabrück (submission 08/2023).
