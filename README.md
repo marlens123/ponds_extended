@@ -31,7 +31,7 @@ The weights of the current final model can be found in `weights/`.
 In the file heads you will find relative paths to data that you need for running the code. These paths refer to the myshare folder that comes with the thesis.
 
 
-Files to recreate our experiments:
+Files to recreate experiments:
 ---------------------------------
 - `model_selection.py`: to recreate the model training (runs `train.py` with different configurations) 
 - `train.py`: contains our training pipeline (you may need to adjust the wandb login in this file)
