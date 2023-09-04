@@ -1,11 +1,13 @@
 # Detection of Melt Ponds on Arctic Sea Ice from Infrared Images
 
-The objective of this repository is to develop a segmentation tool that partitions TIR images into sea ice, melt pond and ocean classes. The current model is a U-net with ResNet34 backbone.
+The objective of this repository is to develop a segmentation tool that partitions TIR images into sea ice, melt pond and ocean classes. The current model is a U-net with ResNet34 backbone, pretrained on ImageNet.
 
 ---------------------------------------
 ### Model Architecture
 
-![model_architecture](https://github.com/marlens123/ponds_extended/assets/80780236/84dde17c-6ecd-4608-af7f-7be75de84729)
+<img scr="https://github.com/marlens123/ponds_extended/assets/80780236/84dde17c-6ecd-4608-af7f-7be75de84729" width="200">
+
+![model_architecture|50%](https://github.com/marlens123/ponds_extended/assets/80780236/84dde17c-6ecd-4608-af7f-7be75de84729)
 
 ---------------------------------------
 ### Current Results
