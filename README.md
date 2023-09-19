@@ -15,7 +15,7 @@ The objective of this repository is to develop a segmentation tool that partitio
 ### Current Results
 
 ![quali](https://github.com/marlens123/ponds_extended/assets/80780236/5f67c223-b8e2-4c26-b8ab-8ae381015a77)
-*As of 31.08.2023 (10 training images): left - model input, middle - initial model results as in Bachelor thesis, right - new model results. Grey - sea ice, black - melt ponds, white - ocean. All images are from flight 9 conducted during the PS131 ATWAICE campaign [1].*
+*As of 31.08.2023 (10 training images): left - model input, middle - earlier model results using 8 images, right - updated model results. Grey - sea ice, black - melt ponds, white - ocean. All images are from flight 9 conducted during the PS131 ATWAICE campaign [1].*
 
 
 ----------------------------------------
