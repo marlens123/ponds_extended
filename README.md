@@ -2,7 +2,7 @@
 
 Melt ponds are pools of water on Arctic sea ice that have a strong influence on the Arctic energy budget by increasing the amount of sunlight that is absorbed. Accurate quantitative analysis of melt ponds is important for improving Arctic climate model predictions.
 
-The objective of this repository is to develop a segmentation tool that partitions TIR images into sea ice, melt pond and ocean classes. The current model is a U-net with ResNet34 backbone, pretrained on ImageNet.
+The objective of this repository is to develop a segmentation tool that partitions thermal infrared (TIR) images into sea ice, melt pond and ocean classes. The current model is a U-net with ResNet34 backbone, pretrained on ImageNet. So far, 10 training images are available due to the time-consuming annotation process. Annotation of additional images is in progress.
 
 ---------------------------------------
 ### Model Architecture
