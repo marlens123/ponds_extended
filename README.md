@@ -1,22 +1,41 @@
-# Detection of melt ponds on Arctic sea ice from infrared images using U-Net
+# Detection of Melt Ponds on Arctic Sea Ice from Infrared Images
 
-Extended code used in my bachelor thesis in Cognitive Science, University of Osnabrück.
-The objective of the thesis was to develop a segmentation tool that partitions TIR images into sea ice, melt pond and ocean classes.
+Melt ponds are pools of water on Arctic sea ice that have a strong influence on the Arctic energy budget by increasing the amount of sunlight that is absorbed. Accurate quantitative analysis of melt ponds is important for improving Arctic climate model predictions.
+
+The objective of this repository is to develop a segmentation tool that partitions thermal infrared (TIR) images into sea ice, melt pond and ocean classes. The current model is a U-net with ResNet34 backbone, pretrained on ImageNet. So far, 10 training images are available due to the time-consuming annotation process. Annotation of additional images is in progress.
+
+---------------------------------------
+### Model Architecture
+
+<img scr="https://github.com/marlens123/ponds_extended/assets/80780236/84dde17c-6ecd-4608-af7f-7be75de84729" width="200">
+
+![model_architecture|50%](https://github.com/marlens123/ponds_extended/assets/80780236/84dde17c-6ecd-4608-af7f-7be75de84729)
+
+---------------------------------------
+### Current Results
+
+![quali](https://github.com/marlens123/ponds_extended/assets/80780236/5f67c223-b8e2-4c26-b8ab-8ae381015a77)
+*As of 31.08.2023 (10 training images): left - model input, middle - earlier model results using 8 images, right - updated model results. Grey - sea ice, black - melt ponds, white - ocean. All images are from flight 9 conducted during the PS131 ATWAICE campaign [1].*
+
+
+----------------------------------------
 
 To make the code work, do the following:
 
 1. Create a new anaconda environment with Python 3.10.0
 2. pip install the packages specified in `requirements.txt` (part 1)
-3. If you try to run `model_selection.py` (recreation of training pipeline), go to ERROR1 and ERROR2 further below in this file
+3. If you try to run `model_selection.py` (recreation of training pipeline), go to ADD1 and ADD2 further below in this file
 
 ---------------------------------------
 
-The weights of our final model can be found in `model_weights/best_modelfinal_runsharpen500.h5`. We also included the weights of a patch size 32 x 32 configuration, as we used these for testing smooth patch prediction.
+The weights of the current final model can be found in `weights/`. 
+
+`model_weights/` contains the weights of the thesis model. This folder also contains the weights of a patch size 32 x 32 configuration, which was used to test smooth patch prediction.
 
 In the file heads you will find relative paths to data that you need for running the code. These paths refer to the myshare folder that comes with the thesis.
 
 
-Files to recreate our experiments:
+Files to recreate experiments:
 ---------------------------------
 - `model_selection.py`: to recreate the model training (runs `train.py` with different configurations) 
 - `train.py`: contains our training pipeline (you may need to adjust the wandb login in this file)
@@ -47,7 +66,7 @@ Additional file contents:
 `vis_segmentation/` contains the OSSP classification algorithm (repo downloaded from https://github.com/wrightni/OSSP)
 
 
-### <a id="Error1"></a>ERROR1: If you get the error `ImportError: cannot import name 'get_submodules_from_kwargs'`
+### <a id="Error1"></a>ADD1: If you get the error `ImportError: cannot import name 'get_submodules_from_kwargs'`
 
 (see https://github.com/qubvel/segmentation_models/issues/248)
 
@@ -68,13 +87,12 @@ def get_submodules_from_kwargs(kwargs):
 ```
 ------------------------------------------------------
 
-### <a id="Error2"></a>ERROR2: To be able login to wandb account
+### <a id="Error2"></a>ADD2: To be able login to wandb account
 
 - before executing `model_selection.py`or `train.py`, execute the following command: `wand login` and insert the key that was sent via email
 - you can also modify the scripts and login to your own wandb account
 
 ------------------------------------------------------
-
 
 To run the OSSP classification algorithm (https://github.com/wrightni/OSSP), do the following:
 
@@ -85,8 +103,14 @@ To run the OSSP classification algorithm (https://github.com/wrightni/OSSP), do 
 (installation may not work properly due to changed package dependencies. I recommend using the classified images, transferred shared in the myshare folder. This is relevant for `mpf.ipynb`)
 
 ----------------------------
-Additional references:
+References:
 -----------------------------
+[1] Kanzow, Thorsten (2023). The Expedition PS131 of the Research Vessel POLARSTERN to the
+Fram Strait in 2022. Ed. by Horst Bornemann and Susan Amir Sawadkuhi. Bremerhaven. DOI: 10.57738/BzPM\_0770\_2023.
+
 - wandb and k-crossfold validation: https://www.kaggle.com/code/ayuraj/efficientnet-mixup-k-fold-using-tf-and-wandb/notebook
 - patchify library for patch extraction: https://pypi.org/project/patchify/
-- patch prediction: https://github.com/bnsreenu/python_for_microscopists/blob/master/206_sem_segm_large_images_using_unet_with_custom_patch_inference.py 
+- patch prediction: https://github.com/bnsreenu/python_for_microscopists/blob/master/206_sem_segm_large_images_using_unet_with_custom_patch_inference.py
+
+
+The project is the extended version of my Bachelor thesis with the Polar Remote Sensing Group, University of Bremen and the Computer Vision Group, University of Osnabrück (submission 08/2023).
