@@ -14,13 +14,13 @@ from sklearn.model_selection import KFold
 from utils.patch_extraction import patch_pipeline, patch_extraction
 from models.segmentation_models_qubvel.segmentation_models.utils import set_trainable
 
-import wandb
+#import wandb
 
 #wandb.init(project="extended")
 
-from wandb.keras import WandbMetricsLogger
+#from wandb.keras import WandbMetricsLogger
 
-wandb.login()
+#wandb.login()
 
 from timeit import default_timer as timer
 
@@ -446,7 +446,7 @@ def train_wrapper(X, y, im_size, base_pref, backbone='resnet34', loss='categoric
         ##########################################
         ############# Tracking Config ############
         ##########################################
-
+        """
         run = wandb.init(project='extended',
                             group=base_pref,
                             name='foldn_{}'.format(fold_no),
@@ -462,6 +462,7 @@ def train_wrapper(X, y, im_size, base_pref, backbone='resnet34', loss='categoric
         config = wandb.config
 
         print("Test set size...", X_test.shape)
+        """
 
         ##########################################
         ################ Training ################
@@ -753,7 +754,7 @@ def final_train(X_train, y_train, X_test, y_test, im_size, base_pref, backbone='
                                 backbone=BACKBONE, batch_size=BATCH_SIZE, fold_no=0, optimizer=optimizer, loss=loss, class_weights=class_weights,
                                 input_normalize=input_normalize, final_run=True, freeze_tune=freeze_tune, early_stop=early_stop)
     
-    wandb.join()
+    #wandb.join()
 
     val_iou_all = history
     time_list = []

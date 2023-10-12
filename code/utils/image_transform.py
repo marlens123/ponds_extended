@@ -18,6 +18,16 @@ def transform_color(image):
         image[mask2] = 1
     return image
 
+def make_visible(image):
+    """
+    transforms mask values to gralevel values
+    """
+    image[image==0] = 0
+    image[image==1] = 76
+    image[image==2] = 255
+
+    return image
+
 
 def crop_center_square(image, im_size=480):
     """
